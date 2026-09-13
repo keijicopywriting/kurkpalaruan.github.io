@@ -1,8 +1,9 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+let navLinks = document.querySelectorAll('.navbar a');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-menu');
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+navLinks.forEach((link) => {
+    link.onclick = () => {
+        menuIcon.classList.remove('bx-x');
+        menuIcon.classList.add('bx-menu');
+        navbar.classList.remove('active');
+    }
+});
